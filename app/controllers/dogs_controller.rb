@@ -16,11 +16,13 @@ class DogsController < ApplicationController
   def new
     @dog = Dog.new
     @shelters = Agency.dropdown
+    @adopters = Adopter.dropdown
   end
 
   # GET /dogs/1/edit
   def edit
     @shelters = Agency.dropdown
+    @adopters = Adopter.dropdown
   end
 
   # POST /dogs
@@ -71,6 +73,6 @@ class DogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dog_params
-      params.require(:dog).permit(:name, :breed, :weight, :age, :shelter_id)
+      params.require(:dog).permit(:name, :breed, :weight, :age, :shelter_id, :adopter_id)
     end
 end

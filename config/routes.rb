@@ -1,4 +1,6 @@
 Shelter::Application.routes.draw do
+  resources :adopters
+
   resources :agencies
 
   resources :dogs

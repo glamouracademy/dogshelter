@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @adopter.name %>
+</p>
+
+<p>
+  <strong>Yard:</strong>
+  <%= @adopter.yard %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @adopter.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @adopter.state %>
+</p>
+
+<strong>Dogs:</strong>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Weight</th>
+    <th>Age</th>
+  </tr>
+<% @adopter.dogs.each do |dog| %>
+  <tr>
+    <td><%= dog.name %></td>
+    <td><%= dog.breed %></td>
+    <td><%= dog.weight %></td>
+    <td><%= dog.age %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', edit_adopter_path(@adopter) %> |
+<%= link_to 'Back', adopters_path %>

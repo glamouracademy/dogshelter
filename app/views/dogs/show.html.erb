@@ -6,5 +6,9 @@
 <strong>Age:</strong> <%= @dog.age %> <br>
 
 <strong>Shelter: </strong><%= link_to @dog.shelter.name, @dog.shelter %><br>
+
+<strong>Adopter: </strong><%= link_to @dog.adopter.name, @dog.adopter %><br>
+
+
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>

@@ -1,0 +1,33 @@
+<h1>Listing adopters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Yard</th>
+      <th>City</th>
+      <th>State</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adopters.each do |adopter| %>
+      <tr>
+        <td><%= adopter.name %></td>
+        <td><%= adopter.yard %></td>
+        <td><%= adopter.city %></td>
+        <td><%= adopter.state %></td>
+        <td><%= link_to 'Show', adopter %></td>
+        <td><%= link_to 'Edit', edit_adopter_path(adopter) %></td>
+        <td><%= link_to 'Destroy', adopter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adopter', new_adopter_path %>

@@ -19,10 +19,9 @@
   <%= f.text_field(:weight) %><br>
   <%= f.label :age %>:
   <%= f.text_field(:age) %><br>
-  <%= f.select(:shelter_id, @shelters) %>
+  <%= f.select(:shelter_id, @shelters) %> <br>
+  <%= f.select(:adopter_id, @adopters) %>
   
-  
-
   <div class="actions">
     <%= f.submit %>
   </div>

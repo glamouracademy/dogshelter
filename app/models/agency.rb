@@ -4,4 +4,5 @@ class Agency < ActiveRecord::Base
   def self.dropdown
     self.all.collect {|agency| [agency.name, agency.id]}
   end
+  
 end

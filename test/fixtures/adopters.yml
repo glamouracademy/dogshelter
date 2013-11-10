@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyText
+  yard: false
+  city: MyText
+  state: MyText
+
+two:
+  name: MyText
+  yard: false
+  city: MyText
+  state: MyText
