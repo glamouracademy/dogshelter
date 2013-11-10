@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<strong>Name:</strong> <%= @dog.name %> <br>
+<strong>Breed:</strong> <%= @dog.breed %> <br>
+<strong>Weight:</strong> <%= @dog.weight %> <br>
+<strong>Age:</strong> <%= @dog.age %> <br>
+
+<strong>Shelter: </strong><%= link_to @dog.shelter.name, @dog.shelter %><br>
+<%= link_to 'Edit', edit_dog_path(@dog) %> |
+<%= link_to 'Back', dogs_path %>
